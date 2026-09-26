@@ -1,0 +1,24 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" width="64" height="64">
+  <defs>
+    <linearGradient id="mnGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#1e40af" />
+      <stop offset="50%" stop-color="#2563eb" />
+      <stop offset="100%" stop-color="#0284c7" />
+    </linearGradient>
+    <linearGradient id="irisGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#38bdf8" />
+      <stop offset="100%" stop-color="#1d4ed8" />
+    </linearGradient>
+  </defs>
+  <rect width="64" height="64" rx="16" fill="url(#mnGrad)" />
+  <!-- Stylized Eye Outline -->
+  <path d="M10 32 C 18 18, 46 18, 54 32 C 46 46, 18 46, 10 32 Z" fill="none" stroke="#ffffff" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round" />
+  <!-- Iris Circle -->
+  <circle cx="32" cy="32" r="9" fill="url(#irisGrad)" stroke="#ffffff" stroke-width="2" />
+  <!-- Pupil -->
+  <circle cx="32" cy="32" r="4.5" fill="#0f172a" />
+  <!-- Light Reflection -->
+  <circle cx="34.5" cy="29.5" r="2" fill="#ffffff" opacity="0.9" />
+  <!-- Medical Care Cross Accent -->
+  <path d="M32 10 L32 14 M30 12 L34 12" stroke="#f59e0b" stroke-width="2" stroke-linecap="round" />
+</svg>

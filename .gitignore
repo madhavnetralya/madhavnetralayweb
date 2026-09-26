@@ -1,0 +1,42 @@
+# Dependencies
+/package/vendor/
+package/vendor/
+**/vendor/
+
+# Environment and Secrets
+.env
+.env.*
+!.env.example
+!.env.production.example
+!package/.env.example
+*.pem
+*.key
+
+# SQLite Database & Backups
+*.db
+*.db-shm
+*.db-wal
+*.db-journal
+*.sqlite
+*.sqlite-shm
+*.sqlite-wal
+*.sqlite-journal
+
+# Storage & Framework Cache
+package/storage/logs/*
+!package/storage/logs/.gitignore
+package/storage/framework/cache/*
+!package/storage/framework/cache/.gitignore
+package/storage/framework/sessions/*
+!package/storage/framework/sessions/.gitignore
+package/storage/framework/views/*
+!package/storage/framework/views/.gitignore
+package/storage/app/state_backups/*
+package/storage/app/public/temp/*
+
+# OS and IDE Files
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/
+*.log
