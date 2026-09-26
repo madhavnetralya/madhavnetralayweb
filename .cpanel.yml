@@ -1,5 +1,25 @@
 ---
 deployment:
   tasks:
-    - /bin/bash cpanel_deploy.sh
-
+    - export DEPLOYPATH=/home2/madha804/public_html
+    - export COREPATH=/home2/madha804/core
+    - /bin/mkdir -p $COREPATH
+    - /bin/mkdir -p $COREPATH/storage/framework/cache
+    - /bin/mkdir -p $COREPATH/storage/framework/sessions
+    - /bin/mkdir -p $COREPATH/storage/framework/views
+    - /bin/mkdir -p $COREPATH/storage/logs
+    - /bin/mkdir -p $COREPATH/storage/app/public/cms
+    - /bin/mkdir -p $COREPATH/storage/app/state_backups
+    - /bin/mkdir -p $COREPATH/bootstrap/cache
+    - /bin/mkdir -p $DEPLOYPATH
+    - /bin/cp -R package/app $COREPATH/
+    - /bin/cp -R package/bootstrap $COREPATH/
+    - /bin/cp -R package/database $COREPATH/
+    - /bin/cp -R package/resources $COREPATH/
+    - /bin/cp -R package/routes $COREPATH/
+    - /bin/cp package/artisan $COREPATH/
+    - /bin/cp package/composer.json $COREPATH/
+    - /bin/cp package/composer.lock $COREPATH/
+    - /bin/cp -R package/public/* $DEPLOYPATH/
+    - /bin/ln -s $COREPATH/storage/app/public $DEPLOYPATH/storage 2>/dev/null || true
+    - /bin/chmod -R 775 $COREPATH/storage $COREPATH/bootstrap/cache 2>/dev/null || true
